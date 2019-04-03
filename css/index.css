@@ -1,0 +1,248 @@
+/* 注意：不是给section1加，而是它下面的子div加，因为fullpage会帮我们自动生成一个div，把我们写的内容包起来
+    所以如果我们希望自己写的内容用弹性布局，就应该给这个生成的div加display:flex；
+*/
+.section1>div{
+
+    display: flex;
+    /* 修改主轴为y轴 */
+    flex-direction: column;
+    /* 主轴用space-around */
+    justify-content: space-around;
+    /* 副轴用居中 */
+    align-items: center;
+}
+
+
+.section1 .text img{
+
+    opacity: .5;
+    margin-left: 40px;
+}
+
+/* 如果既有section1又有animation，就改掉里面的img */
+.section1.animation .text img{
+
+    transition: all 1s;
+    opacity: 1;
+    margin-left: 0;
+}
+
+
+.section2 .shield{
+
+    width: 420px;
+
+}
+
+.section2>div{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.section2 .shield img:nth-child(1){
+
+    transform: translate(-1000px,-1000px) rotate(660deg);
+}
+.section2 .shield img:nth-child(2){
+
+    transform: translate(-1000px,-1000px) rotate(660deg);
+}
+.section2 .shield img:nth-child(3){
+
+    transform: translate(1000px,1000px) rotate(660deg);
+}
+.section2 .shield img:nth-child(4){
+
+    transform: translate(-1000px,-1000px) rotate(660deg);
+}
+.section2 .shield img:nth-child(5){
+
+    transform: translate(0px,0px) rotate(360deg);
+}
+.section2 .shield img:nth-child(6){
+
+    transform: translate(-1000px,-1000px) rotate(660deg);
+}
+.section2 .shield img:nth-child(7){
+
+    transform: translate(-1000px,-1000px) rotate(660deg);
+}
+.section2 .shield img:nth-child(8){
+
+    transform: translate(1000px,1000px) rotate(660deg);
+}
+.section2 .shield img:nth-child(9){
+
+    transform: translate(1000px,1000px) rotate(660deg);
+}
+
+
+.section2.animation .shield img:nth-child(1){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(2){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(3){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(4){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(5){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(6){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(7){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(8){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section2.animation .shield img:nth-child(9){
+
+    transition: all 1s;
+    /* 去掉它的形变 */
+    transform: none;
+}
+.section3>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section3 .recet{
+    width: 453px;
+    height: 449px;
+    display: flex;
+       justify-content: center;
+       align-items: center;
+       background: url('../images/circle.png') no-repeat;
+      
+}
+.section3 .rocket{
+    transform: translate(-800px,800px);
+}
+.section3.animation .rocket{
+    transition: all 1s;
+    transform: none;
+}
+ .section4 .sectionBox{
+     height: 438px;
+
+ }
+ .section4 .search{
+     width: 529px;
+     height: 66px;
+     background: url('../images/search.png');
+     position: relative;
+     transform: translateX(-1000px);
+ }
+ .section4 .key{
+     width: 0px;
+     height: 22px;
+     top: 22px;
+     left: 25px;
+     position: absolute;
+     background: url('../images/key.png');
+ }
+ .section4 .result{
+    width: 529px;
+    height: 0px;
+     background: url('../images/result.png');
+ }
+ .section4>div{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+ .section4.animation .search{
+     transform: none;
+     transition: all 1s;
+ }
+ .section4.animation .key{
+     transition: all 1s 1s steps(5);
+     width: 99px;
+ }
+ .section4.animation .result{
+     transition: all 2s 2s ;
+     height: 372px; 
+ }
+ .section5>div{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     overflow: hidden;
+ }
+ .section5 .browser{
+     flex: 1;
+     width: 1004px;
+    
+     position: relative;
+ }
+ .section5 .extra{
+     position: absolute;
+     right: 0;
+     bottom: 0;
+ }
+ .section5 .browser .border {
+     position: absolute;
+   
+     background-color: #fff;
+ }
+ .border:nth-child(odd){
+     width: 100%;
+     height: 5px;
+ }
+ .border:nth-child(even){
+     width: 5px;
+     height: 100%;
+ }
+ .top{
+     transform: translateX(-1300px);
+ }
+ .bottom{
+     bottom: 0;
+     transform: translateX(1300px);
+ }
+ .right{
+     right: 0;
+     transform: translateY(-1300px);
+ }
+ .left{
+     
+     transform: translateY(1300px)
+ }
+ .section5.animation .border{
+     transition: all 1s ;
+     transform: none
+ }
